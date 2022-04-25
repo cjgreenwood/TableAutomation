@@ -5,6 +5,8 @@
 
 clear all
 
+ssc install excelcol
+
 webuse auto, clear
 
 ta rep78
@@ -35,6 +37,9 @@ di r(table)[1,1]
 di r(table)[5,1]
 di r(table)[6,1]
 
+di r(table)[1,2]
+di r(table)[5,2]
+di r(table)[6,2]
 
 * Setup excel file
 putexcel set putexceltut_pres.xlsx, sheet(Table1_Manual) replace
