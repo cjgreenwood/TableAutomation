@@ -29,17 +29,19 @@ tab1	foreign rep78_3
 
 proportion foreign					// proportions command
 eret list							// estimation results					
-mat list r(table)					// results
+mat def prop = r(table)
+mat list prop					// results
 
 proportion foreign				// proportions command
-di `e(N)'
-di r(table)[1,1]
-di r(table)[5,1]
-di r(table)[6,1]
 
-di r(table)[1,2]
-di r(table)[5,2]
-di r(table)[6,2]
+di `e(N)'
+di prop[1,1]
+di prop[5,1]
+di prop[6,1]
+
+di prop[1,2]
+di prop[5,2]
+di prop[6,2]
 
 * Setup excel file
 putexcel set putexceltut_pres.xlsx, sheet(Table1_Manual) replace
